@@ -27,8 +27,13 @@ class Contact extends ComponentBase
         ];
     }
     
-    public function onRun(){
-        echo "onrun";
+    /*
+     * Called when you open the Page in the browser , not admin !
+     */
+    public function onRender(){
+         \ChromePhp::log('plugins/daslicht/contact Contact.php, onRender');
     }
+    
+
 
 }

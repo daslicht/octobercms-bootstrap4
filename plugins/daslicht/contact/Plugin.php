@@ -32,7 +32,6 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         // ladybug_dump('test');
-        \ChromePhp::log('Hello console!');
         return [
             '\Daslicht\Contact\Components\Contact' => 'contact'
         ];
