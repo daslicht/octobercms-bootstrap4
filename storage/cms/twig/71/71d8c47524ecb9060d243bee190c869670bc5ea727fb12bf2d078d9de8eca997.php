@@ -18,7 +18,12 @@ class __TwigTemplate_76dcb23d118e346d568a68872320f81f14d0d796108e3c8e9401a31dcab
         // line 1
         echo "<p>This is the default markup for component Contact</p>
 
-<small>You can delete this file if you want</small>";
+<small>You can delete this file if you want</small>
+<hr>
+Mysetting:
+";
+        // line 6
+        echo twig_escape_filter($this->env, (isset($context["mysetting"]) ? $context["mysetting"] : null), "html", null, true);
     }
 
     public function getTemplateName()
@@ -26,11 +31,19 @@ class __TwigTemplate_76dcb23d118e346d568a68872320f81f14d0d796108e3c8e9401a31dcab
         return "/Applications/AMPPS/www/october/plugins/daslicht/contact/components/contact/default.htm";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  19 => 1,);
+        return array (  26 => 6,  19 => 1,);
     }
 }
 /* <p>This is the default markup for component Contact</p>*/
 /* */
 /* <small>You can delete this file if you want</small>*/
+/* <hr>*/
+/* Mysetting:*/
+/* {{ mysetting }}*/

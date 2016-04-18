@@ -3306,3 +3306,12 @@ Stack trace:
 [2016-04-18 19:33:42] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Daslicht\Contact\ChromePhp' not found' in /Applications/AMPPS/www/october/plugins/daslicht/contact/Plugin.php:35
 Stack trace:
 #0 {main}  
+[2016-04-18 20:04:54] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'daslicht\contact\Models\contactsettings' not found' in /Applications/AMPPS/www/october/modules/system/controllers/settings.php:161
+Stack trace:
+#0 {main}  
+[2016-04-18 20:05:55] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Cannot redeclare class ContactSettings' in /Applications/AMPPS/www/october/plugins/daslicht/contact/models/contactsettings.php:14
+Stack trace:
+#0 {main}  
+[2016-04-18 20:07:52] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Daslicht\Contact\Models\Model' not found' in /Applications/AMPPS/www/october/plugins/daslicht/contact/Models/contactsettings.php:3
+Stack trace:
+#0 {main}  

@@ -1,10 +1,9 @@
-1461009176s:496:"a:6:{s:5:"mtime";i:1461008405;s:7:"content";s:149:"title = "Contact"
+1461010779s:468:"a:6:{s:5:"mtime";i:1461010177;s:7:"content";s:140:"title = "Contact"
 url = "/contact"
 layout = "main"
 is_hidden = 0
 
 [contact]
-max = 11
 ==
 <?php
 function onEnd() {
@@ -12,7 +11,7 @@ function onEnd() {
 }
 ?>
 ==
-{% component 'contact' %}";s:7:"viewBag";a:0:{}s:8:"settings";a:5:{s:5:"title";s:7:"Contact";s:3:"url";s:8:"/contact";s:6:"layout";s:4:"main";s:9:"is_hidden";s:1:"0";s:10:"components";a:1:{s:7:"contact";a:1:{s:3:"max";s:2:"11";}}}s:4:"code";s:25:"
+{% component 'contact' %}";s:7:"viewBag";a:0:{}s:8:"settings";a:5:{s:5:"title";s:7:"Contact";s:3:"url";s:8:"/contact";s:6:"layout";s:4:"main";s:9:"is_hidden";s:1:"0";s:10:"components";a:1:{s:7:"contact";a:0:{}}}s:4:"code";s:25:"
 function onEnd() {
 
 }
