@@ -13,9 +13,9 @@ class Contact extends ComponentBase
         ];
     }
 
-    public function defineProperties()
-    {
-        return [];
-    }
+    // public function defineProperties()
+    // {
+    //     return [];
+    // }
 
 }
