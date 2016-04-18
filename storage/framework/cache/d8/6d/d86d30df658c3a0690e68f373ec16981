@@ -1,0 +1,10 @@
+1461006180s:618:"a:6:{s:5:"mtime";i:1461000092;s:7:"content";s:201:"title = "Forum Member"
+url = "/forum-member/:slug"
+is_hidden = 0
+
+[forumMember]
+slug = "{{ :slug }}"
+channelPage = "forum/forum-channel"
+topicPage = "forum/forum-topic"
+==
+{% component 'forumMember' %}";s:7:"viewBag";a:0:{}s:8:"settings";a:4:{s:5:"title";s:12:"Forum Member";s:3:"url";s:19:"/forum-member/:slug";s:9:"is_hidden";s:1:"0";s:10:"components";a:1:{s:11:"forumMember";a:3:{s:4:"slug";s:11:"{{ :slug }}";s:11:"channelPage";s:19:"forum/forum-channel";s:9:"topicPage";s:17:"forum/forum-topic";}}}s:4:"code";N;s:6:"markup";s:29:"{% component 'forumMember' %}";}";

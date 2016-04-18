@@ -1,0 +1,25 @@
+title = "Blog Post Page"
+url = "/blog/:slug"
+layout = "main"
+is_hidden = 0
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "blog/blog-categories"
+
+[forumEmbedTopic]
+embedCode = "{{ :slug }}"
+channelSlug = "blog-comments"
+memberPage = "forum-member"
+==
+<?php
+function onEnd() {
+    $this->page->title =   $this['post']->title;
+    //echo 'e:'. $this['post']->title;die;
+}
+?>
+==
+{% component 'blogPost' %}
+<hr>
+<h2>Comments:</h2>
+{% component 'forumEmbedTopic' %}

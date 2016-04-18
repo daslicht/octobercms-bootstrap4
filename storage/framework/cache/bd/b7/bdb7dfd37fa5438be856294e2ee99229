@@ -1,0 +1,11 @@
+1460209872s:626:"a:6:{s:5:"mtime";i:1460209269;s:7:"content";s:200:"title = "categoryPage"
+url = "/categorypage"
+layout = "default"
+is_hidden = 0
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "blog/category"
+==
+{% component 'blogCategories' %}";s:7:"viewBag";a:0:{}s:8:"settings";a:5:{s:5:"title";s:12:"categoryPage";s:3:"url";s:13:"/categorypage";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:10:"components";a:1:{s:14:"blogCategories";a:3:{s:4:"slug";s:11:"{{ :slug }}";s:12:"displayEmpty";s:1:"0";s:12:"categoryPage";s:13:"blog/category";}}}s:4:"code";N;s:6:"markup";s:32:"{% component 'blogCategories' %}";}";

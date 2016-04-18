@@ -1,0 +1,9 @@
+1460217177s:329:"a:2:{s:5:"mtime";i:1460215483;s:7:"content";s:275:"{% if breadcrumbs %}
+    <ul>
+        {% for breadcrumb in breadcrumbs %}
+            <li class="{{ breadcrumb.isActive ? 'active' : '' }}">
+                <a href="{{ breadcrumb.url }}">{{ breadcrumb.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}";}";

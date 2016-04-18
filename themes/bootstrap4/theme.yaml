@@ -1,0 +1,16 @@
+name: "Bootstrap 4"
+description: "Bootstrap 4 starter Theme for OctoberCMS"
+author: "Marc Wensauer"
+homepage: "http://jumplink.eu"
+code: "bootstrap4"
+
+
+form:
+    fields:
+        site_name:
+            label: Bootstrap 4 Starter Theme
+            comment: The website name as it should appear on the front-end
+            default: My Amazing Bootstrap 4 Site!
+
+
+# <h1>Welcome to {{ this.theme.site_name }}!</h1>

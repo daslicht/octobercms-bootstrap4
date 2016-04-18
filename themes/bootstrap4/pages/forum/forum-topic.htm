@@ -1,0 +1,20 @@
+title = "Forum Topic"
+url = "/forum-topic/:slug"
+layout = "main"
+is_hidden = 0
+
+[forumTopic]
+slug = "{{ :slug }}"
+postsPerPage = 20
+memberPage = "forum/forum-member"
+channelPage = "forum/forum-channel"
+==
+<?php
+function onEnd() {
+    $this->page->title =   $this['topic']->subject;
+    //echo json_encode($this['topic'] );
+  //  die;
+}
+?>
+==
+{% component 'forumTopic' %}
