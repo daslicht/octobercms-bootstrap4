@@ -3303,3 +3303,6 @@ Stack trace:
 [2016-04-10 17:19:41] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Cannot use [] for reading' in /Applications/AMPPS/www/october/modules/cms/Classes/CodeParser.php(189) : eval()'d code:8
 Stack trace:
 #0 {main}  
+[2016-04-18 19:33:42] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Daslicht\Contact\ChromePhp' not found' in /Applications/AMPPS/www/october/plugins/daslicht/contact/Plugin.php:35
+Stack trace:
+#0 {main}  

@@ -1,8 +1,0 @@
-1460310284s:229:"a:2:{s:5:"mtime";i:1460309157;s:7:"content";s:175:"{% if errorHappened %}
-    {% partial __SELF__~'::flash-messages' %}
-{% else %}
-    <h2>Email Sent successfully</h2>
-    <p>
-        {{confirmation_text}}
-    </p>
-{% endif %}";}";

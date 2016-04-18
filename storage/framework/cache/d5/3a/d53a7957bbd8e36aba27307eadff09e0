@@ -1,5 +1,0 @@
-1460217105s:180:"a:2:{s:5:"mtime";i:1460215483;s:7:"content";s:126:"{% if __SELF__.menuItems %}
-    <ul>
-        {% partial __SELF__ ~ "::items" items=__SELF__.menuItems %}
-    </ul>
-{% endif %}";}";

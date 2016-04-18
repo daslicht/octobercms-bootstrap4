@@ -1,11 +1,10 @@
-1461006180s:3222:"a:6:{s:5:"mtime";i:1460310541;s:7:"content";s:1504:"title = "Contact"
+1461007586s:496:"a:6:{s:5:"mtime";i:1461006979;s:7:"content";s:149:"title = "Contact"
 url = "/contact"
 layout = "main"
 is_hidden = 0
 
-[contactForm]
-injectBootstrapAssets = 0
-injectMainScript = 1
+[contact]
+max = 10
 ==
 <?php
 function onEnd() {
@@ -13,76 +12,8 @@ function onEnd() {
 }
 ?>
 ==
-<div class="confirm-container"> <!--This will contain the confirmation when the email is successfully sent--> </div> <form class="flexiContactForm" role="form" data-request="{{ SELF }}::onMailSent" data-request-update="'{{ SELF }}::confirm': '.confirm-container'">
-
-<div class="form-groups">
-    <div class="form-group">
-        <input type="text" class="form-control" value=""  name="name" placeholder="Enter name">
-    </div>
-    <div class="form-group">
-        <input type="text" class="form-control" value="" name="email" placeholder="Enter Email">
-    </div>
-    <div class="form-group">
-        <input type="text" class="form-control" value="" name="subject" placeholder="Enter Subject">
-    </div>
-    <div class="form-group">
-        <textarea class="form-control" value="" name="body" placeholder="Enter Message" cols="30" rows="10"></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary btn-lg pull-right">Send</button>
-</div>
-</form>
-
-
-<script>
-(function() {
-  $('.flexiContactForm').on('ajaxSuccess', function(ev, context, data, status, jqXHR) {
-      console.log('pling');
-    /*if (data.error === true) {
-      return console.log(arguments);
-    } else {
-      return $('.form-groups').hide(1000);
-    }*/
-  });
-
-}).call(this);
-</script>
-
-{#{% component 'contactForm' %}#}";s:7:"viewBag";a:0:{}s:8:"settings";a:5:{s:5:"title";s:7:"Contact";s:3:"url";s:8:"/contact";s:6:"layout";s:4:"main";s:9:"is_hidden";s:1:"0";s:10:"components";a:1:{s:11:"contactForm";a:2:{s:21:"injectBootstrapAssets";s:1:"0";s:16:"injectMainScript";s:1:"1";}}}s:4:"code";s:25:"
+{% component 'contact' %}";s:7:"viewBag";a:0:{}s:8:"settings";a:5:{s:5:"title";s:7:"Contact";s:3:"url";s:8:"/contact";s:6:"layout";s:4:"main";s:9:"is_hidden";s:1:"0";s:10:"components";a:1:{s:7:"contact";a:1:{s:3:"max";s:2:"10";}}}s:4:"code";s:25:"
 function onEnd() {
 
 }
-";s:6:"markup";s:1338:"<div class="confirm-container"> <!--This will contain the confirmation when the email is successfully sent--> </div> <form class="flexiContactForm" role="form" data-request="{{ SELF }}::onMailSent" data-request-update="'{{ SELF }}::confirm': '.confirm-container'">
-
-<div class="form-groups">
-    <div class="form-group">
-        <input type="text" class="form-control" value=""  name="name" placeholder="Enter name">
-    </div>
-    <div class="form-group">
-        <input type="text" class="form-control" value="" name="email" placeholder="Enter Email">
-    </div>
-    <div class="form-group">
-        <input type="text" class="form-control" value="" name="subject" placeholder="Enter Subject">
-    </div>
-    <div class="form-group">
-        <textarea class="form-control" value="" name="body" placeholder="Enter Message" cols="30" rows="10"></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary btn-lg pull-right">Send</button>
-</div>
-</form>
-
-
-<script>
-(function() {
-  $('.flexiContactForm').on('ajaxSuccess', function(ev, context, data, status, jqXHR) {
-      console.log('pling');
-    /*if (data.error === true) {
-      return console.log(arguments);
-    } else {
-      return $('.form-groups').hide(1000);
-    }*/
-  });
-
-}).call(this);
-</script>
-
-{#{% component 'contactForm' %}#}";}";
+";s:6:"markup";s:25:"{% component 'contact' %}";}";

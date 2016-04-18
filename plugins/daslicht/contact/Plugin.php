@@ -31,11 +31,10 @@ class Plugin extends PluginBase
      */
     public function registerComponents()
     {
-        return []; // Remove this line to activate
-
+        // ladybug_dump('test');
+        \ChromePhp::log('Hello console!');
         return [
-            //'Daslicht\Contact\Components\MyComponent' => 'myComponent',
-            'Daslicht\Contact\Components\Contact' => 'contact'
+            '\Daslicht\Contact\Components\Contact' => 'contact'
         ];
     }
 

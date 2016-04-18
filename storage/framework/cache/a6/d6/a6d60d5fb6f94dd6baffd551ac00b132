@@ -1,5 +1,0 @@
-1460218797s:356:"a:6:{s:5:"mtime";i:1460217298;s:7:"content";s:60:"[viewBag]
-snippetCode = "test"
-snippetName = "test"
-==
-test!";s:7:"viewBag";a:2:{s:11:"snippetCode";s:4:"test";s:11:"snippetName";s:4:"test";}s:8:"settings";a:1:{s:10:"components";a:1:{s:7:"viewBag";a:2:{s:11:"snippetCode";s:4:"test";s:11:"snippetName";s:4:"test";}}}s:4:"code";N;s:6:"markup";s:5:"test!";}";
