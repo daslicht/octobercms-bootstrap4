@@ -74,7 +74,7 @@ class Contact extends ComponentBase
          */
         return [
             "foo" => "done!",
-            "result" => $this->renderPartial('result')
+            "result" => $this->renderPartial('contact::result')
         ];
     }
        

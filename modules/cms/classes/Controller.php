@@ -754,6 +754,7 @@ class Controller
     {
         $vars = $this->vars;
         $this->vars = array_merge($this->vars, $parameters);
+        
 
         /*
          * Alias @ symbol for ::
@@ -762,13 +763,15 @@ class Controller
             $name = '::' . substr($name, 1);
         }
 
+
         /*
          * Process Component partial
          */
         if (strpos($name, '::') !== false) {
 
             list($componentAlias, $partialName) = explode('::', $name);
-
+            
+           
             /*
              * Component alias not supplied
              */
@@ -776,6 +779,7 @@ class Controller
                 if ($this->componentContext !== null) {
                     $componentObj = $this->componentContext;
                 }
+                 
                 elseif (($componentObj = $this->findComponentByPartial($partialName)) === null) {
                     if ($throwException) {
                         throw new CmsException(Lang::get('cms::lang.partial.not_found_name', ['name'=>$partialName]));
@@ -1267,7 +1271,10 @@ class Controller
      */
     public function findComponentByPartial($partial)
     {
+       
         foreach ($this->page->components as $component) {
+            
+  
             $fileName = ComponentPartial::getFilePath($component, $partial);
             if (!strlen(File::extension($fileName))) {
                 $fileName .= '.htm';
