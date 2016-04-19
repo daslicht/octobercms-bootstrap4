@@ -64,7 +64,7 @@ class Contact extends ComponentBase
         
         /*
          * Which is the correct location for my component partials ?
-         * the result.htl is currentlt preset at:
+         * the result.htm is currently preset at:
          * /plugins/daslicht/contact/result.htm 
          * /plugins/daslicht/contact/partials/result.htm 
          * /plugins/daslicht/contact/components/result.htm 
