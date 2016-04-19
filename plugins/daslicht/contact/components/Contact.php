@@ -63,7 +63,7 @@ class Contact extends ComponentBase
         \ChromePhp::log(post('test'));
         
         /*
-         * Which is the correct loccation for my component partials ?
+         * Which is the correct location for my component partials ?
          * the result.htl is currentlt preset at:
          * /plugins/daslicht/contact/result.htm 
          * /plugins/daslicht/contact/partials/result.htm 
