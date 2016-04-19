@@ -69,7 +69,7 @@ class Contact extends ComponentBase
          * /plugins/daslicht/contact/partials/result.htm 
          * /plugins/daslicht/contact/components/result.htm 
          * /plugins/daslicht/contact/components/contact/result.htm 
-         * But I still get 'partisl not found ?!'
+         * But I still get 'partial not found ?!'
          * 
          */
         return [
