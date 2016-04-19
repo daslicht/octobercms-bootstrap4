@@ -51,16 +51,20 @@ class Contact extends ComponentBase
          $this->page['mysetting'] = $settings->mysetting;
     }
     
-
-
+    function onInit()
+    {
+        // This code will be executed before
+        // an AJAX request is handled.
+         \ChromePhp::log('onInit before AJAX');
+    }
+    
+    function onDoit()
+    {
+        \ChromePhp::log(post('test'));
+        return [
+            "foo" => "done!",
+            "result" => $this->renderPartial('result')
+        ];
+    }
+       
 }
-
-
-/*
-        // Using properties
-        //$this->page['code'] = $this->property('code');
-        // Using settings
-        $settings = GoogleAnalyticsSettings::instance();
-        $this->page['code'] = $settings->code;
-
-*/

@@ -40,7 +40,19 @@ class __TwigTemplate_1f2b9a1cc32c1c8dc8c01fe0ef3fafccc8e34c52e1d45e125277d76a498
         echo $this->env->getExtension('CMS')->assetsFunction('css');
         echo $this->env->getExtension('CMS')->displayBlock('styles');
         // line 13
-        echo "    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js\"></script>
+        echo "    
+    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js\"></script>
+    ";
+        // line 16
+        echo "    ";
+        echo '<script src="'. Request::getBasePath()
+                .'/modules/system/assets/js/framework.js"></script>'.PHP_EOL;
+        echo '<script src="'. Request::getBasePath()
+                    .'/modules/system/assets/js/framework.extras.js"></script>'.PHP_EOL;
+        echo '<link rel="stylesheet" property="stylesheet" href="'. Request::getBasePath()
+                    .'/modules/system/assets/css/framework.extras.css">'.PHP_EOL;
+        // line 17
+        echo "    
 </head>";
     }
 
@@ -56,7 +68,7 @@ class __TwigTemplate_1f2b9a1cc32c1c8dc8c01fe0ef3fafccc8e34c52e1d45e125277d76a498
 
     public function getDebugInfo()
     {
-        return array (  43 => 13,  40 => 12,  36 => 11,  28 => 8,  19 => 1,);
+        return array (  55 => 17,  47 => 16,  43 => 13,  40 => 12,  36 => 11,  28 => 8,  19 => 1,);
     }
 }
 /* <head>*/
@@ -71,5 +83,9 @@ class __TwigTemplate_1f2b9a1cc32c1c8dc8c01fe0ef3fafccc8e34c52e1d45e125277d76a498
 /*     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">*/
 /*     <link href="{{ ['assets/css/sticky-footer-navbar.css']|theme }}" rel="stylesheet">*/
 /*     {% styles %}*/
+/*     */
 /*     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>*/
+/*     {# October AJAXFramework with extras(css files and load indicator) #}*/
+/*     {% framework extras %}*/
+/*     */
 /* </head>*/

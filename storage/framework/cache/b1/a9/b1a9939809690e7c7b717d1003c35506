@@ -1,6 +1,43 @@
-1461010722s:194:"a:2:{s:5:"mtime";i:1461009288;s:7:"content";s:140:"<p>This is the default markup for component Contact</p>
+1461065817s:1242:"a:2:{s:5:"mtime";i:1461063927;s:7:"content";s:1187:"<p>This is the default markup for component Contact</p>
 
 <small>You can delete this file if you want</small>
 <hr>
 Mysetting:
-{{ mysetting }}";}";
+{{ mysetting }}
+<form>
+    <input type="text" name ="test" value="default"/>
+    <input type="submit" value="doit!">
+</form>
+
+<script>
+    $(document).ready( function() {
+       $('form').on('submit', function(e) {
+            e.preventDefault();
+           // console.log('onSubmit');
+            // $('form').request('onDoit', {
+            //     confirm: 'Are you sure?'
+            // });
+            
+            $('form').request('onDoit', {
+                success: function(data) {
+                    // console.log('inline success!', data);
+                    this.success(data).done(function() {
+                       console.log('inline success!', data);
+                    });
+                }
+            }) 
+            
+       });
+       /**
+        * Triggered on the form object after the request is
+        * successfully completed. 
+        */
+       $('form').on('ajaxSuccess', function(e,context,data,status,jqXHR) {
+           // console.log('ajaxSuccess:', e,context,data,status,jqXHR);
+        })
+       
+       
+
+
+    });
+</script>";}";

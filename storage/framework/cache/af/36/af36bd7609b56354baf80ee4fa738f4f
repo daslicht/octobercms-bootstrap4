@@ -1,4 +1,4 @@
-1461010722s:1889:"a:6:{s:5:"mtime";i:1460310261;s:7:"content";s:864:"[viewBag]
+1461065817s:2121:"a:6:{s:5:"mtime";i:1461061199;s:7:"content";s:981:"[viewBag]
 ==
 <head>
     <!-- Required meta tags always come first -->
@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
     <link href="{{ ['assets/css/sticky-footer-navbar.css']|theme }}" rel="stylesheet">
     {% styles %}
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-</head>";s:7:"viewBag";a:0:{}s:8:"settings";a:1:{s:10:"components";a:1:{s:7:"viewBag";a:0:{}}}s:4:"code";N;s:6:"markup";s:851:"<head>
+    {# October AJAXFramework with extras(css files and load indicator) #}
+    {% framework extras %}
+    
+</head>";s:7:"viewBag";a:0:{}s:8:"settings";a:1:{s:10:"components";a:1:{s:7:"viewBag";a:0:{}}}s:4:"code";N;s:6:"markup";s:966:"<head>
     <!-- Required meta tags always come first -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -25,5 +29,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
     <link href="{{ ['assets/css/sticky-footer-navbar.css']|theme }}" rel="stylesheet">
     {% styles %}
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    {# October AJAXFramework with extras(css files and load indicator) #}
+    {% framework extras %}
+    
 </head>";}";

@@ -24,6 +24,44 @@ Mysetting:
 ";
         // line 6
         echo twig_escape_filter($this->env, (isset($context["mysetting"]) ? $context["mysetting"] : null), "html", null, true);
+        echo "
+<form>
+    <input type=\"text\" name =\"test\" value=\"default\"/>
+    <input type=\"submit\" value=\"doit!\">
+</form>
+
+<script>
+    \$(document).ready( function() {
+       \$('form').on('submit', function(e) {
+            e.preventDefault();
+           // console.log('onSubmit');
+            // \$('form').request('onDoit', {
+            //     confirm: 'Are you sure?'
+            // });
+            
+            \$('form').request('onDoit', {
+                success: function(data) {
+                    // console.log('inline success!', data);
+                    this.success(data).done(function() {
+                       console.log('inline success!', data);
+                    });
+                }
+            }) 
+            
+       });
+       /**
+        * Triggered on the form object after the request is
+        * successfully completed. 
+        */
+       \$('form').on('ajaxSuccess', function(e,context,data,status,jqXHR) {
+           // console.log('ajaxSuccess:', e,context,data,status,jqXHR);
+        })
+       
+       
+
+
+    });
+</script>";
     }
 
     public function getTemplateName()
@@ -47,3 +85,40 @@ Mysetting:
 /* <hr>*/
 /* Mysetting:*/
 /* {{ mysetting }}*/
+/* <form>*/
+/*     <input type="text" name ="test" value="default"/>*/
+/*     <input type="submit" value="doit!">*/
+/* </form>*/
+/* */
+/* <script>*/
+/*     $(document).ready( function() {*/
+/*        $('form').on('submit', function(e) {*/
+/*             e.preventDefault();*/
+/*            // console.log('onSubmit');*/
+/*             // $('form').request('onDoit', {*/
+/*             //     confirm: 'Are you sure?'*/
+/*             // });*/
+/*             */
+/*             $('form').request('onDoit', {*/
+/*                 success: function(data) {*/
+/*                     // console.log('inline success!', data);*/
+/*                     this.success(data).done(function() {*/
+/*                        console.log('inline success!', data);*/
+/*                     });*/
+/*                 }*/
+/*             }) */
+/*             */
+/*        });*/
+/*        /***/
+/*         * Triggered on the form object after the request is*/
+/*         * successfully completed. */
+/*         *//* */
+/*        $('form').on('ajaxSuccess', function(e,context,data,status,jqXHR) {*/
+/*            // console.log('ajaxSuccess:', e,context,data,status,jqXHR);*/
+/*         })*/
+/*        */
+/*        */
+/* */
+/* */
+/*     });*/
+/* </script>*/
