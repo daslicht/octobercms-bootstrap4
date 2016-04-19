@@ -61,6 +61,17 @@ class Contact extends ComponentBase
     function onDoit()
     {
         \ChromePhp::log(post('test'));
+        
+        /*
+         * Which is the correct loccation for my component partials ?
+         * the result.htl is currentlt preset at:
+         * /plugins/daslicht/contact/result.htm 
+         * /plugins/daslicht/contact/partials/result.htm 
+         * /plugins/daslicht/contact/components/result.htm 
+         * /plugins/daslicht/contact/components/contact/result.htm 
+         * But I still get 'partisl not found ?!'
+         * 
+         */
         return [
             "foo" => "done!",
             "result" => $this->renderPartial('result')

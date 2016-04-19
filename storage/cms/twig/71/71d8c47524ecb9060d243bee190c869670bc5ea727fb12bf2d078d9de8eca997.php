@@ -48,6 +48,11 @@ Mysetting:
                 }
             }) 
             
+            // function onRedirectMe()
+            // {
+            //     return Redirect::to('http://google.com');
+            // }
+            
        });
        /**
         * Triggered on the form object after the request is
@@ -107,6 +112,11 @@ Mysetting:
 /*                     });*/
 /*                 }*/
 /*             }) */
+/*             */
+/*             // function onRedirectMe()*/
+/*             // {*/
+/*             //     return Redirect::to('http://google.com');*/
+/*             // }*/
 /*             */
 /*        });*/
 /*        /***/
