@@ -1,37 +1,64 @@
-<p>This is the default markup for component Contact</p>
-
-<small>You can delete this file if you want</small>
-<hr>
+<h1>Contact</h1>
 Mysetting:
 {{ mysetting }}
-<form>
-    <input type="text" name ="test" value="default"/>
-    <input type="submit" value="doit!">
-</form>
+
+<div id="form_container">
+    <!--<form method="POST">
+        <input type="text" name ="test" value="default"/>
+        <input type="submit" value="doit!">
+    </form>-->
+    {% partial 'contact::contact_form' %}
+</div>
+
+<div id="result_container">
+
+</div>
 
 <script>
     $(document).ready( function() {
-       $('form').on('submit', function(e) {
+        
+        var form = $('#daslicht_contact_form');
+        var reset = $("#form_reset_button");
+        var send = $("#form_send_button");
+        var c = $("#form_container");
+        var result = $("#result_container");
+        
+        form.on('submit', function(e) {
             e.preventDefault();
-           // console.log('onSubmit');
-            // $('form').request('onDoit', {
-            //     confirm: 'Are you sure?'
-            // });
+            //$.oc.stripeLoadIndicator.show();
+            function showResult(data) {
+               c.animate({
+                    opacity:0
+               },125, function() {
+                    c.css('display','none');
+                    result.html("");
+                    result.html(data.result); 
+                    console.log('data:', data.result);
+                    result.animate({
+                        opacity:1
+                    },250);
+               }); 
+            }
             
-            $('form').request('onDoit', {
+            function reset() {
+                form.reset();
+                
+            }
+            
+            form.request('onDoit', {
                 success: function(data) {
                     // console.log('inline success!', data);
-                    this.success(data).done(function() {
+                    this.success(data).done( function() {
                        console.log('inline success!', data);
+                       showResult(data);
                     });
                 }
-            }) 
+            });
             
-            // function onRedirectMe()
-            // {
-            //     return Redirect::to('http://google.com');
-            // }
-            
+            reset.onclick = function(e) {
+                form.reset();
+            }
+                    
        });
        /**
         * Triggered on the form object after the request is

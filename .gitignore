@@ -1,5 +1,7 @@
 /bootstrap/compiled.php
 /vendor
+/config/dev
+/storage/database.sqlite
 composer.phar
 .DS_Store
 .idea

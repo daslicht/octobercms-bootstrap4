@@ -74,3 +74,5 @@
     RewriteRule ^ index.php [L]
 
 </IfModule>
+
+SetEnv APP_ENV "dev"

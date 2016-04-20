@@ -1,8 +1,8 @@
 <?php namespace Daslicht\Contact\Components;
 
 use Cms\Classes\ComponentBase;
-
 use Daslicht\Contact\Models\ContactSettings;
+use Mail;
 
 class Contact extends ComponentBase
 {
@@ -60,8 +60,21 @@ class Contact extends ComponentBase
     
     function onDoit()
     {
-        \ChromePhp::log(post('test'));
-        
+       
+        $email = post('email');
+        $name = post('name');
+        $message = post('message');
+         \ChromePhp::log(  $email,  $name, $message);
+         $vars = [
+             "name" =>  $name
+         ];
+         Mail::send('rainlab.user::mail.welcome', $vars, function($message) {
+
+            $message->from('a@b.net', 'October');
+            $message->to('daslicht@ansolas.de');
+
+        });
+       // $this->page()
         /*
          * Which is the correct location for my component partials ?
          * the result.htm is currently preset at:
@@ -74,8 +87,14 @@ class Contact extends ComponentBase
          */
         return [
             "foo" => "done!",
-            "result" => $this->renderPartial('contact::result')
+           
+            "result" => $this->renderPartial('contact::result',[
+                 "test" => "OK!"
+            ])
         ];
+        // $content = $this->renderPartial('component-partial.htm', [
+        //     'name' => 'John Smith'
+        // ]);
     }
        
 }

@@ -16,7 +16,9 @@ class __TwigTemplate_6233eb1527f539f85081ce003663d546a762bbba4331fbd9b076cfbaa11
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
-        echo "result comes here ";
+        echo "<div>Ajax Result: ";
+        echo twig_escape_filter($this->env, (isset($context["test"]) ? $context["test"] : null), "html", null, true);
+        echo " </div>";
     }
 
     public function getTemplateName()
@@ -24,9 +26,14 @@ class __TwigTemplate_6233eb1527f539f85081ce003663d546a762bbba4331fbd9b076cfbaa11
         return "/Applications/AMPPS/www/october/plugins/daslicht/contact/components/contact/result.htm";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
         return array (  19 => 1,);
     }
 }
-/* result comes here */
+/* <div>Ajax Result: {{test}} </div>*/
