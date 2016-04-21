@@ -10,5 +10,14 @@
             "email": "marc@jumplink.me"
         }
     ],
-    "require": {}
+    "autoload": {
+        "psr-4": {
+            "Jumplink\\Wizard\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
 }
