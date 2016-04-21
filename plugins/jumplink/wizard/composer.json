@@ -1,0 +1,14 @@
+{
+    "name": "jumplink/wizard",
+    "description": "Wizard Plugin for OctoberCMS",
+    "require-dev": {
+        "ccampbell/chromephp": "^4.1"
+    },
+    "authors": [
+        {
+            "name": "Marc Wensauer",
+            "email": "marc@jumplink.me"
+        }
+    ],
+    "require": {}
+}

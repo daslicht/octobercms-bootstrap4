@@ -1,0 +1,73 @@
+<h1>Wizard</h1>
+
+
+<script src="jquery.steps.js"></script>
+
+<div id="form_container">
+
+</div>
+
+<div id="result_container">
+
+</div>
+
+<!--<script>-->
+    <!--$(document).ready( function() {-->
+        <!---->
+        <!--var form = $('#daslicht_contact_form');-->
+        <!--var reset = $("#form_reset_button");-->
+        <!--var send = $("#form_send_button");-->
+        <!--var c = $("#form_container");-->
+        <!--var result = $("#result_container");-->
+        <!---->
+        <!--form.on('submit', function(e) {-->
+            <!--e.preventDefault();-->
+            <!--$.oc.stripeLoadIndicator.show();-->
+            <!--function showResult(data) {-->
+               <!--c.animate({-->
+                    <!--opacity:0-->
+               <!--},125, function() {-->
+                    <!--c.css('display','none');-->
+                    <!--result.html("");-->
+                    <!--result.html(data.result); -->
+                    <!--console.log('data:', data.result);-->
+                    <!--result.animate({-->
+                        <!--opacity:1-->
+                    <!--},250);-->
+               <!--}); -->
+            <!--}-->
+            <!---->
+            <!--function reset() {-->
+                <!--form.reset();-->
+                <!---->
+            <!--}-->
+            <!---->
+            <!--form.request('onDoit', {-->
+                <!--success: function(data) {-->
+                    <!--// console.log('inline success!', data);-->
+                    <!--this.success(data).done( function() {-->
+                       <!--console.log('inline success!', data);-->
+                       <!--$.oc.stripeLoadIndicator.hide();-->
+                       <!--showResult(data);-->
+                    <!--});-->
+                <!--}-->
+            <!--});-->
+            <!---->
+            <!--reset.onclick = function(e) {-->
+                <!--form.reset();-->
+            <!--}-->
+                    <!---->
+       <!--});-->
+       <!--/**-->
+        <!--* Triggered on the form object after the request is-->
+        <!--* successfully completed. -->
+        <!--*/-->
+       <!--$('form').on('ajaxSuccess', function(e,context,data,status,jqXHR) {-->
+           <!--// console.log('ajaxSuccess:', e,context,data,status,jqXHR);-->
+        <!--})-->
+       <!---->
+       <!---->
+
+
+    <!--});-->
+<!--</script>-->
