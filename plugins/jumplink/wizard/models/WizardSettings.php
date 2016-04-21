@@ -1,6 +1,4 @@
-<?php 
-
-namespace Jumplink\Wizard\Models;
+<?php namespace Jumplink\Wizard\Models;
 
 use Model;
 
