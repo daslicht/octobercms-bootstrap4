@@ -19,7 +19,7 @@ class Wizard extends PluginBase
         return [
             'name'        => 'wizard',
             'description' => 'Wizard Plugin',
-            'author'      => 'daslicht',
+            'author'      => 'Marc Wensauer',
             'icon'        => 'icon-leaf'
         ];
     }
@@ -31,7 +31,6 @@ class Wizard extends PluginBase
      */
     public function registerComponents()
     {
-        // ladybug_dump('test');
         return [
             '\Jumplink\Wizard\Components\Wizard' => 'wizard'
         ];
@@ -48,45 +47,5 @@ class Wizard extends PluginBase
             ]
         ];
     }
-    
-    /**
-     * Registers any back-end permissions used by this plugin.
-     *
-     * @return array
-     */
-    // public function registerPermissions()
-    // {
-    //     return []; // Remove this line to activate
-
-    //     return [
-    //         'daslicht.contact.some_permission' => [
-    //             'tab' => 'contact',
-    //             'label' => 'Some permission'
-    //         ],
-    //     ];
-    // }
-
-    /**
-     * Registers back-end navigation items for this plugin.
-     *
-     * @return array
-     */
-    // public function registerNavigation()
-    // {
-    //     return []; // Remove this line to activate
-
-    //     return [
-    //         'contact' => [
-    //             'label'       => 'contact',
-    //             'url'         => Backend::url('daslicht/contact/mycontroller'),
-    //             'icon'        => 'icon-leaf',
-    //             'permissions' => ['daslicht.contact.*'],
-    //             'order'       => 500,
-    //         ],
-    //     ];
-    // }
-    
-
-
-
+   
 }
