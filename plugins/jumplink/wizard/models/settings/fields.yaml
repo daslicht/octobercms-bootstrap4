@@ -1,0 +1,17 @@
+fields:
+  
+  wizardsettings:
+    label: Wizard Settings
+    placeholder: Wizard Settings
+              
+  wizard_steps:
+    label: Wizard Steps Items
+    type: repeater
+    form:
+        fields:
+            step_title:
+                label: Wizard Step Name
+                placeholder: Wizard Step Name
+            step_code:
+                label: Code
+                type: richeditor

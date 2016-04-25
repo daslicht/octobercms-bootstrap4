@@ -3,10 +3,14 @@
 use Backend;
 use System\Classes\PluginBase;
 
+
+
+/*https://octobercms.com/docs/plugin/components#component-assets*/
+
 /**
  * wizard Plugin Information File
  */
-class Wizard extends PluginBase
+class Plugin extends PluginBase
 {
 
     /**
@@ -41,8 +45,9 @@ class Wizard extends PluginBase
             'settings' => [
                 'label'       => 'Wizard',
                 'description' => 'Wizard Setting',
+                'category'    => 'Jumplink',
                 'icon'        => 'icon-bar-chart-o',
-                'class'       => 'Jumplink\Wizard\Models\wizardsettings',
+                'class'       => 'Jumplink\Wizard\Models\settings',
                 'order'       => 1
             ]
         ];

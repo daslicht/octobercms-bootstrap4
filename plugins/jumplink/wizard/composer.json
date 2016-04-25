@@ -2,7 +2,8 @@
     "name": "jumplink/wizard",
     "description": "Wizard Plugin for OctoberCMS",
     "require-dev": {
-        "ccampbell/chromephp": "^4.1"
+        "ccampbell/chromephp": "^4.1",
+        "raulfraile/ladybug": "^1.0"
     },
     "authors": [
         {
@@ -19,5 +20,8 @@
         "branch-alias": {
             "dev-master": "1.0-dev"
         }
+    },
+    "require": {
+        
     }
 }

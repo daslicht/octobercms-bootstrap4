@@ -17,6 +17,7 @@
     "tests"
   ],
   "dependencies": {
-    "jquery.steps": "jquery-steps#^1.1.0"
+    "jquery.steps": "jquery-steps#^1.1.0",
+    "bootstrap": "v4.0.0-alpha.2"
   }
 }

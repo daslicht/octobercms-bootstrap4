@@ -2,3 +2,4 @@ fields:
   mysetting:
     label: My Setting Fields Label 
     placeholder: this is the mysetting placeholder
+  
