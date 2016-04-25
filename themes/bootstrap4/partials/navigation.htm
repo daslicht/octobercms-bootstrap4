@@ -59,7 +59,9 @@ function onEnd()
                         <li class="nav-item {% if this.page.id == 'forum' %}active{% endif %}">
                             <a class="nav-link" href="/forum">Forum</a>
                         </li>
-                        
+                        <li class="nav-item {% if this.page.id == 'wizard' %}active{% endif %}">
+                            <a class="nav-link" href="/wizard">Wizard</a>
+                        </li>
                         <li class="nav-item {% if this.page.id == 'account' %}active{% endif %} pull-xs-right">
                             <a class="nav-link" href="{{ 'account'|page }}">Account</a>
                         </li>

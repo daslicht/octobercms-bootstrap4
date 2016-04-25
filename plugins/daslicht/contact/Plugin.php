@@ -79,6 +79,7 @@ class Plugin extends PluginBase
         'settings' => [
             'label'       => 'My Setting',
             'description' => 'My Setting Description',
+            'category'    => 'Contact Form',
             'icon'        => 'icon-bar-chart-o',
             'class'       => 'Daslicht\Contact\Models\contactsettings',
             'order'       => 1
