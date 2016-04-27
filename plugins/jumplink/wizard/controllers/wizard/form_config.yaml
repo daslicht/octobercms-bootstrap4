@@ -1,0 +1,23 @@
+# ===================================
+#  Form Behavior Config
+# see: https://octobercms.com/docs/backend/forms
+# ===================================
+
+name: Wizard Settings
+form: $/jumplink/wizard/models/settings/fields.yaml
+modelClass: Jumplink\Wizard\Settings #??? Jumplink\Wizard\Models\Settings
+
+create:
+    title: New Wizard Settings
+    redirect: jumplink/wizard/settings/update/:id
+    redirectClose: jumplink/wizard/settings
+    flashSave: Settings has been created!
+    
+update:
+    title: Edit Wizard Settings
+    redirect: jumplink/wizard/settings
+    flashSave: Settings updated successfully!
+    flashDelete: Settings has been deleted.
+    
+preview:
+    title: View Wizard Settings

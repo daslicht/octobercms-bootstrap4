@@ -1,17 +1,90 @@
+# see: https://octobercms.com/docs/backend/forms#form-field-options
+
 fields:
-  
-  wizardsettings:
-    label: Wizard Settings
-    placeholder: Wizard Settings
-              
-  wizard_steps:
-    label: Wizard Steps Items
-    type: repeater
-    form:
-        fields:
-            step_title:
-                label: Wizard Step Name
-                placeholder: Wizard Step Name
-            step_code:
-                label: Code
-                type: richeditor
+    wizardsettings:
+        label: Wizard Settings
+        placeholder: Wizard Settings
+                
+    wizard_steps:
+        label: Wizard Steps Items
+        type: repeater
+        form:
+            fields:
+                step_title:
+                    label: Wizard Step Name
+                    placeholder: Wizard Step Name
+                step_code:
+                    label: Code
+                    type: richeditor
+
+tabs:
+    stretch: true #specifies if this tab stretches to fit the parent height.
+    defaultTab: foo #the default tab to assign fields to. Default: Misc.
+    cssClass: my_class #assigns a CSS class to the tab container.
+    fields:
+        my_tab1:
+            label: Tabs Area Label 1
+            type: text #defines how this field should be rendered. Default: text.
+            placeholder: Wizard Settings
+            comment: this is a comment below
+            commentAbove: this is a comment above
+            default: this is the default value
+            tab: bar
+            span: right #auto, left, right, full. Default: auto.
+            size: huge #specifies a field size for fields that use it, for example, the textarea field. Options: tiny, small, large, huge, giant.
+        
+        my_tab2:
+            tab: foo
+            label: Permissions
+            type: checkboxlist
+            options:
+                open_account: Open account
+                close_account: Close account
+                modify_account: Modify account
+       
+        # https://octobercms.com/docs/backend/forms#widget-relation
+        # categories:
+        #     tab: bar
+        #     label: Categories
+        #     type: relation
+        #     nameFrom: my_tab2     
+               
+        background_image:
+            tab: foo
+            label: Background image
+            type: mediafinder
+            mode: image
+        # renders a file uploader for images or regular files. The field name must use an attachOne or attachMany relation.
+        # avatar:
+        #     tab: foo
+        #     label: Avatar
+        #     type: fileupload
+        #     mode: image
+        #     imageHeight: 260
+        #     imageWidth: 260
+        
+        # https://octobercms.com/docs/backend/forms#widget-recordfinder
+        # user:
+        #     label: User
+        #     type: recordfinder
+        #     list: $/rainlab/user/models/user/columns.yaml
+        #     prompt: Click the %s button to find a user
+        #     nameFrom: name
+        #     descriptionFrom: email    
+            
+        user_details_section:
+            tab: baz
+            label: User details
+            type: section
+            comment: This section contains details about the user.
+       
+        content:
+            tab: partial_tab
+            type: partial
+            path: $/jumplink/wizard/models/settings/_content_field.htm
+            
+secondaryTabs:
+    fields:
+        my_secoandary_tabs:
+            label: secondaryTabs Area Label 1
+            placeholder: Wizard Settings

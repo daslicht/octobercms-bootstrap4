@@ -49,12 +49,14 @@ class Wizard extends ComponentBase
     
     function onInit()
     {
-        //  \ChromePhp::log('onInit before AJAX');
+          \ChromePhp::log('onInit before AJAX');
     }
     
     public function onRun()
     {
-        \ChromePhp::log('onRun, Wizard', Settings::get('wizardsettings')); 
+        $settings = Settings::instance();
+        \ChromePhp::log('onRun, Wizard:', Settings::get('wizardsettings')); 
+        \ChromePhp::log('my_tab2:',$settings->my_tab2);
         //ladybug_dump($this);
         $this->addJs('/plugins/jumplink/wizard/assets/vendor/jquery.steps/build/jquery.steps.min.js');
         $this->addJs('/plugins/jumplink/wizard/components/wizard.js');
