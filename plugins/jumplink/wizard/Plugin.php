@@ -47,7 +47,8 @@ class Plugin extends PluginBase
                 'description' => 'Wizard Setting',
                 'category'    => 'Jumplink',
                 'icon'        => 'icon-bar-chart-o',
-                'class'       => 'Jumplink\Wizard\Models\settings',
+                //'class'       => 'Jumplink\Wizard\Models\settings',
+                'url'       => 'jumplink/wizard/wizard',
                 'order'       => 1
             ]
         ];
