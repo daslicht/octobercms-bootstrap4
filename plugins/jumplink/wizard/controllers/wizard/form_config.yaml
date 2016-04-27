@@ -5,7 +5,7 @@
 
 name: Wizard Settings
 form: $/jumplink/wizard/models/settings/fields.yaml
-modelClass: Jumplink\Wizard\Settings #??? Jumplink\Wizard\Models\Settings
+modelClass: Jumplink\Wizard\Models\Settings #Jumplink\Wizard\Settings #??? 
 
 create:
     title: New Wizard Settings

@@ -54,4 +54,32 @@ class Plugin extends PluginBase
         ];
     }
    
+    public function registerNavigation()
+    {
+        return [
+            'wizard' => [
+                'label'       => 'Wizard',
+                'url'         => Backend::url('jumplink/wizard/wizard'),
+                'icon'        => 'icon-pencil',
+                'permissions' => ['jumplink.wizard.*'],
+                'order'       => 500,
+
+                // 'sideMenu' => [
+                //     'posts' => [
+                //         'label'       => 'Posts',
+                //         'icon'        => 'icon-copy',
+                //         'url'         => Backend::url('jumplink/wizard/settings'),
+                //         'permissions' => ['jumplink.wizard.access_settings']
+                //      ],
+                //     // 'categories' => [
+                //     //     'label'       => 'Categories',
+                //     //     'icon'        => 'icon-copy',
+                //     //     'url'         => Backend::url('acme/blog/categories'),
+                //     //     'permissions' => ['acme.blog.access_categories']
+                //     // ]
+                // ]
+            ]
+        ];
+    }
+
 }
